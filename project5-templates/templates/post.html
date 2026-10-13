@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{.Title}} - Go Blog</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        .post { max-width: 800px; margin: 0 auto; padding: 20px; }
+        .post-title { color: #2c3e50; font-size: 32px; margin-bottom: 20px; }
+        .post-meta { color: #7f8c8d; font-size: 16px; margin-bottom: 30px; }
+        .post-content { line-height: 1.8; color: #34495e; }
+        a { color: #3498db; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .back-link { display: inline-block; margin-top: 30px; }
+    </style>
+</head>
+<body>
+    <div class="post">
+        <h1 class="post-title">{{.Title}}</h1>
+        <div class="post-meta">
+            By {{.Author}} on {{.Date}}
+        </div>
+        <div class="post-content">
+            {{.Content}}
+        </div>
+        <a href="/" class="back-link">← Back to all posts</a>
+    </div>
+</body>
+</html>

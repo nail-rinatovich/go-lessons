@@ -1,0 +1,7 @@
+[
+  { "id": 1, "title": "The Go Programming Language", "author": "Alan Donovan", "year": 2015 },
+  { "id": 2, "title": "Learning Go", "author": "Jon Bodner", "year": 2021 },
+  { "id": 3, "title": "Concurrency in Go", "author": "Katherine Cox-Buday", "year": 2017 },
+  { "id": 4, "title": "100 Go Mistakes and How to Avoid Them", "author": "Teiva Harsanyi", "year": 2022 },
+  { "id": 5, "title": "Let's Go", "author": "Alex Edwards", "year": 2023 }
+]

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Go Blog Posts</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        .post { border: 1px solid #ddd; padding: 20px; margin: 20px 0; border-radius: 5px; }
+        .post-title { color: #2c3e50; font-size: 24px; margin-bottom: 10px; }
+        .post-meta { color: #7f8c8d; font-size: 14px; margin-bottom: 15px; }
+        .post-content { line-height: 1.6; color: #34495e; }
+        a { color: #3498db; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <h1>Blog Posts</h1>
+    {{if not .}}<p>No posts yet.</p>{{end}}
+    {{range .}}
+    <div class="post">
+        <h2 class="post-title">{{.Title}}</h2>
+        <div class="post-meta">
+            By {{.Author | upper}} on {{.Date}}
+        </div>
+        <div class="post-content">
+            {{excerpt .Content 50}}
+        </div>
+        <a href="/post?id={{.ID}}">Read more →</a>
+    </div>
+    {{end}}
+</body>
+</html>

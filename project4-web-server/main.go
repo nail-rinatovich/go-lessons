@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"html"
 	"log"
 	"net/http"
 	"time"
@@ -72,7 +71,8 @@ func greetHandler(w http.ResponseWriter, r *http.Request) {
 
 	// Respond with a greeting. Escape the name so user input
 	// cannot inject HTML or JavaScript into the page (XSS)
-	fmt.Fprintf(w, "<h1>Hello, %s! Nice to meet you.</h1><a href=\"/\">Back</a>", html.EscapeString(name))
+	// fmt.Fprintf(w, "<h1>Hello, %s! Nice to meet you.</h1><a href=\"/\">Back</a>", html.EscapeString(name))
+	fmt.Fprintf(w, "<h1>Hello, %s! Nice to meet you.</h1><a href=\"/\">Back</a>", name)
 }
 
 func main() {
